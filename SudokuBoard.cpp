@@ -16,9 +16,9 @@ void SudokuBoard::set(int row, int col, int value) {
 
 bool SudokuBoard::isValid(int row, int col, int num) const {
     for (int x = 0; x < SIZE; x++) {
-        if (board[row][x] == num) return false;
-        if (board[x][col] == num) return false;
-        if (board[3 * (row / 3) + x / 3][3 * (col / 3) + x % 3] == num) return false;
+        if (board[row][x] == num) return false; // Check if the number is already in the row
+        if (board[x][col] == num) return false; // Check if the number is already in the column
+        if (board[3 * (row / 3) + x / 3][3 * (col / 3) + x % 3] == num) return false; // Check if the number is already in the box
     }
     return true;
 }
