@@ -19,6 +19,7 @@ public:
      * @brief Solves the Sudoku puzzle using a backtracking algorithm.
      * @param board A reference to a SudokuBoard object representing the puzzle to solve.
      * @return true if the puzzle is solved successfully, false otherwise.
+     * source: https://cs.wikipedia.org/wiki/Backtracking
      */
     bool solve(SudokuBoard &board) override;
 };
